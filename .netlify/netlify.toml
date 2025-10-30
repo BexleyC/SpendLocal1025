@@ -2,16 +2,18 @@ functionsDirectory = "/tmp/cc-agent/41141470/project/netlify/functions"
 functionsDirectoryOrigin = "default"
 headersOrigin = "config"
 redirectsOrigin = "config"
+plugins = []
 
 [build]
 publish = "/tmp/cc-agent/41141470/project/dist"
 publishOrigin = "config"
 commandOrigin = "config"
-command = "npm run build"
+command = "npm ci --include=dev && npm run build"
 functions = "/tmp/cc-agent/41141470/project/netlify/functions"
 
 [build.environment]
 NODE_ENV = "production"
+NPM_FLAGS = "--include=dev"
 
 [build.processing]
 
@@ -38,17 +40,7 @@ outgoing_port = 587.0
 
 [functions]
 
-[functions.emails]
-included_files = ["./emails/**"]
-
 [functions."*"]
-
-[[plugins]]
-origin = "ui"
-package = "@netlify/plugin-emails"
-pinned_version = "1"
-
-[plugins.inputs]
 
 [[headers]]
 for = "/*"
