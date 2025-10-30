@@ -27,7 +27,7 @@ export const DirectImageDisplay: React.FC<DirectImageDisplayProps> = ({
   }
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative w-full ${className}`}>
       {!isLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 animate-pulse">
           <span className="sr-only">Loading image: {alt}</span>
@@ -36,7 +36,7 @@ export const DirectImageDisplay: React.FC<DirectImageDisplayProps> = ({
       <img
         src={src}
         alt={alt}
-        className={`max-w-full h-auto mx-auto transition-opacity duration-300 ${
+        className={`w-full h-auto object-contain transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoad={handleLoad}
