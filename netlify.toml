@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci && npm run build"
+  command = "npm ci --include=dev && npm run build"
   publish = "dist"
 
 [[headers]]
@@ -32,6 +32,7 @@
 [context.production]
   [context.production.environment]
     NODE_ENV = "production"
+    NPM_FLAGS = "--include=dev"
 
 # Handle subdomains
 [[redirects]]
