@@ -94,8 +94,11 @@ export function LandingSite() {
               fetchpriority="high"
               style={{
                 maxWidth: '100%',
+                width: '100%',
                 height: 'auto',
-                display: 'block'
+                display: 'block',
+                objectFit: 'contain',
+                aspectRatio: '2000/1505'
               }}
             />
           </div>
