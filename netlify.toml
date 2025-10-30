@@ -1,0 +1,97 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' identity.netlify.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.unsplash.com https://raw.githubusercontent.com https://i.ibb.co https://www.worldatlas.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' identity.netlify.com; frame-src identity.netlify.com; object-src 'none'"
+
+# Cache static assets
+[[headers]]
+  for = "/*.js"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Domain configuration
+[context.production]
+  [context.production.environment]
+    NODE_ENV = "production"
+
+# Handle subdomains
+[[redirects]]
+  from = "https://tewksbury.spendlocal.net/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://wilmington.spendlocal.net/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://billerica.spendlocal.net/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://andover.spendlocal.net/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://northandover.spendlocal.net/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Email handling
+[[redirects]]
+  from = "https://mailsrv.spendlocal.net/*"
+  to = "/.netlify/functions/inbound-email/:splat"
+  status = 200
+  force = true
+  conditions = {Role = ["email-service"]}
+
+[[redirects]]
+  from = "/api/email/*"
+  to = "/.netlify/functions/inbound-email/:splat"
+  status = 200
+  force = true
+
+# Catch-all redirect
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Enable Netlify Identity
+[template.environment]
+  ENABLE_IDENTITY = "true"
+
+# Email forwarding configuration
+[email]
+  forward_to = "BexleyCohen@gmail.com"
+  domain = "mailsrv.spendlocal.net"
+  incoming_port = 25
+  outgoing_port = 587

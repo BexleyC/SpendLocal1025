@@ -1,0 +1,19 @@
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://spendlocal.net/sitemap.xml
+
+# Important pages
+Allow: /wilmington
+Allow: /tewksbury
+Allow: /billerica
+Allow: /andover
+Allow: /northandover
+Allow: /wilmington-coupons
+Allow: /tewksbury-coupons
+Allow: /billerica-coupons
+Allow: /andover-coupons
+Allow: /northandover-coupons
+Allow: /qr-codes

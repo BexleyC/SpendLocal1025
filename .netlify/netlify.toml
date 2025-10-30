@@ -1,0 +1,177 @@
+functionsDirectory = "/tmp/cc-agent/41141470/project/netlify/functions"
+functionsDirectoryOrigin = "default"
+headersOrigin = "config"
+redirectsOrigin = "config"
+
+[build]
+publish = "/tmp/cc-agent/41141470/project/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+functions = "/tmp/cc-agent/41141470/project/netlify/functions"
+
+[build.environment]
+NODE_ENV = "production"
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[template]
+
+[template.environment]
+ENABLE_IDENTITY = "true"
+
+[email]
+forward_to = "BexleyCohen@gmail.com"
+domain = "mailsrv.spendlocal.net"
+incoming_port = 25.0
+outgoing_port = 587.0
+
+[functions]
+
+[functions.emails]
+included_files = ["./emails/**"]
+
+[functions."*"]
+
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-emails"
+pinned_version = "1"
+
+[plugins.inputs]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' identity.netlify.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://images.unsplash.com https://raw.githubusercontent.com https://i.ibb.co https://www.worldatlas.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' identity.netlify.com; frame-src identity.netlify.com; object-src 'none'"
+
+[[headers]]
+for = "/*.js"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/assets/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+from = "https://tewksbury.spendlocal.net/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://wilmington.spendlocal.net/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://billerica.spendlocal.net/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://andover.spendlocal.net/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://northandover.spendlocal.net/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://mailsrv.spendlocal.net/*"
+to = "/.netlify/functions/inbound-email/:splat"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+Role = ["email-service"]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/api/email/*"
+to = "/.netlify/functions/inbound-email/:splat"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

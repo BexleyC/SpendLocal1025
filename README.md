@@ -1,0 +1,1 @@
+SpendLocal1025
