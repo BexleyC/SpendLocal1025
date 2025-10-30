@@ -160,7 +160,7 @@ force = true
 from = "/*"
 to = "/index.html"
 status = 200.0
-force = true
+force = false
 
 [redirects.query]
 

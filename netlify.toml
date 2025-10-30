@@ -79,12 +79,11 @@
   status = 200
   force = true
 
-# Catch-all redirect
+# SPA fallback - only for HTML navigation
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
 
 # Enable Netlify Identity
 [template.environment]
