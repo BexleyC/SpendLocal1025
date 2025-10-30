@@ -84,7 +84,7 @@ export function LandingSite() {
         <div className="mt-12 px-2 sm:px-4 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <img
-              src="https://i.ibb.co/Wv4KssCG/Spendlocal-Landing-Page-Image.png"
+              src="/spendlocal-landing.png"
               alt="SPENDLOCAL advertising example showing the full layout of the direct mail piece"
               className="w-full h-auto rounded-lg shadow-2xl"
               width="2000"
