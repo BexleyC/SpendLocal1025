@@ -74,10 +74,11 @@ export default function PricingPage() {
         <div className="mt-24 bg-white/10 backdrop-blur-sm rounded-2xl p-8">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Sample Layout</h2>
           <div className="relative rounded-lg overflow-hidden shadow-2xl">
-            <DirectImageDisplay 
-              src="https://github.com/BexleyC/SpendLocalTewksbury/raw/refs/heads/main/SpendLocal%20Pricing%20Sheet"
+            <img
+              src="https://raw.githubusercontent.com/BexleyC/SpendLocalTewksbury/refs/heads/main/SpendLocal%20Pricing%20Sheet.png"
               alt="SPENDLOCAL pricing sheet showing ad space layout and dimensions"
               className="w-full h-auto"
+              loading="lazy"
             />
           </div>
           <p className="mt-4 text-gray-300 text-sm text-center">
