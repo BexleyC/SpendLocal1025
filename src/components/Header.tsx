@@ -14,12 +14,16 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-1 flex items-center">
-            <Link 
+            <Link
               to="/"
-              className="flex items-center space-x-2 text-white hover:opacity-90 transition-opacity"
+              className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
             >
-              <Newspaper className="w-6 h-6 sm:w-8 sm:h-8" />
-              <span className="font-bold text-lg sm:text-xl">SPEND LOCAL</span>
+              <img
+                src="/Spendlocal Logo.jpg"
+                alt="SpendLocal"
+                className="h-10 sm:h-12 w-auto"
+              />
+              <span className="font-bold text-lg sm:text-xl text-white">SpendLocal</span>
             </Link>
           </div>
 
