@@ -29,12 +29,11 @@ export function LandingSite() {
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mt-10 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400">
-                Big, Bold and Beautiful.
-              </span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl leading-8 text-gray-200">
-              One Giant Postcard Delivered to Every Mailbox in Your Area.
-            </p>
+              Giant Postcards Delivered to Thousands Each Month
+                </span>
+            
+            <p className="mt-8 text-lg sm:text-xl leading-8 text-gray-200">
+            Own Your Spot on a Mailing for just <span className="text-amber-400">$249</span></p></h1>
             <div className="mt-10">
               <button
                 onClick={() => {
@@ -61,10 +60,10 @@ export function LandingSite() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">
-              Why advertise in <span className="text-amber-400">Envelopes</span> and <span className="text-amber-400">Magazines</span> that no one ever opens?
+             <span className="text-amber-400">Envelopes</span> and <span className="text-amber-400">Magazines</span> don't work!
             </p>
             <p className="mt-4 text-xl text-gray-300 text-center font-bold">
-              SpendLocal offers an "in your face" solution that's too big to ignore at a price so affordable you can't say no.
+              SpendLocal is Guaranteed Front Page Exposure with Category Exclusivity on Each Giant Postcard!
             </p>
 
             {/* Pricing Chart Button */}
